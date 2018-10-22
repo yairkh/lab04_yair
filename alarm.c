@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
             {
 
                alarm_ready=1;
-               ifttt("http://127.0.0.1:8080/trigger/event/with/key/lab04_yair", "Alarm ready", asctime(&tm), "");
+               ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/lab04_yair", "Alarm ready", asctime(&tm), "");
             }
             digitalWrite (2, LOW) ;
 	    digitalWrite (1, HIGH) ; delay (200) ;
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
             break;
        case 1:
             alarm_ready = 0;
-            ifttt("http://127.0.0.1:8080/trigger/event/with/key/lab04_yair", "Alarm Event", asctime(&tm), "");
+            ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/lab04_yair", "Alarm Event", asctime(&tm), "");
 	    digitalWrite (1, LOW);
             digitalWrite (2, HIGH); delay (300) ;
             break;
